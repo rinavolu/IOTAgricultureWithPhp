@@ -1,0 +1,30 @@
+<table border="1">
+    <tr>
+        <th>S.N</th>
+        <th>Full Name</th>
+        <th>Email Address</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    
+    <%
+    if(userData.length!=0){
+    var i=1;
+    userData.forEach(function(data){
+    %>
+    <tr>
+        <td><%=i; %></td>
+        <td><%=data.id %></td>
+        <td><%=data.humidity %></td>
+        <td><%=data.temperature %></td>
+        <td><%=data.date %></td>
+    </tr>
+    <%  i++; }) %>
+    <% } else{ %>
+        <tr>
+            <td colspan="7">No Data Found</td>
+        </tr>
+    <% } %>
+</table>
